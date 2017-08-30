@@ -14,5 +14,7 @@ y_test = dataTest[['YIELD']]
 
 ols = linear_model.LinearRegression()
 model = ols.fit(x_train, y_train)
+accuracy = ols.score(x_test, y_test)
 
+print(accuracy)
 print (model.predict(x_test)[0:5])
